@@ -1,0 +1,20 @@
+<form method="post" action="{% url 'registrarse' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ registrarse_form.nombre.label_tag }}
+        {{ registrarse_form.nombre}}
+    </div>
+
+    <div class="form-group">
+        {{ registrarse_form.correo.label_tag }}
+        {{ registrarse_form.correo}}
+    </div>
+
+    <div class="form-group">
+        {{ registrarse_form.password.label_tag }}
+        {{ registrarse_form.password}}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+    <a href="{% url 'home' %}" class="btn btn-secondary">home</a>
+</form>
