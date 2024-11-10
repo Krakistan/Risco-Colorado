@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="collapse collapse-content" id="cotiza-content">
+        <div class="card card-body">
+            <form method="post">
+              {% csrf_token %}
+              <div class="inputbox">
+                <label >Nombre</label>
+                {{ cotizacionform.nombre }}
+              </div>
+            
+              <div class="inputbox">
+                <label >Correo Electrónico</label>
+                {{ cotizacionform.correo }}
+              </div>
+            
+              <div class="inputbox">
+                <label >Teléfono</label>
+                {{ cotizacionform.telefono }}
+              </div>
+            
+              <div class="inputbox">
+                <label >Comentarios o preguntas</label>
+                {{ cotizacionform.mensaje }}
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Enviar Cotización</button>
+            </form>
+        </div>
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+</body>
+</html>
