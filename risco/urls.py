@@ -8,6 +8,15 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('carrito/', views.carrito, name='carrito'),
+    path('carrito/<int:indx>/', views.carrito, name='carrito_with_id'),
+    path('anadir_producto_carro/<int:indx>/', views.anadir_al_carro, name='anadirproducto'),
+    path('eliminar_producto_carro/<int:indx>', views.eliminar_del_carro, name='eliminarproducto'),
+    path('aumentar_cantidad/<int:indx>', views.aumentar_cantidad, name="aumentarcant"),
+    path('disminuir_cantidad/<int:indx>', views.disminuir_cantidad, name="disminuircant"),
+    path('confirmar_compra', views.confirmar_compra, name="confirmarcompra"),
+    path('pagar/', views.pagar, name='pagar'),
+
     path('nosotros/', views.nosotros, name='nosotros'),
     path('registro/', pagweb_views.registro, name='registro'),
     path('cotizacion/', views.cotizacion, name='cotizacion'),
@@ -16,6 +25,7 @@ urlpatterns = [
         authentication_form=CustomAuthenticationForm,
         redirect_authenticated_user=True,
     ), name='iniciar_sesion'),
+
     path('cerrar-sesion/', auth_views.LogoutView.as_view(next_page='iniciar_sesion'), name='cerrar_sesion'),
 ]
 

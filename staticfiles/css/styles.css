@@ -1,0 +1,209 @@
+/* Estilos generales */
+
+    body {
+        background-image: url("/static/images/fondo.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+
+
+/* Estilos para la navbar */
+.navbar {
+    background-color: #FF9900;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.navbar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar-title {
+    color: #fff;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+
+
+/* Estilos para los botones de la barra de navegación */
+.nav-button {
+    color: #ffffff !important;
+    background-color: #95460e;
+    
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    background-color: #5e2e0c;
+    color: #ffffff !important;
+
+}
+
+/* Estilo especial para el botón de iniciar sesión */
+.nav-login {
+    background-color: #333;
+    border-color: #333;
+    color: #fff !important;
+}
+
+.nav-login:hover {
+    background-color: #FF9900;
+    border-color: #FF9900;
+    color: #fff !important;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .nav-button {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    margin-top: 40px !important;
+    
+    width: 60%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.search-container:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    padding-right: 50px; /* Espacio para el botón de búsqueda */
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #FF9900;
+    outline: none;
+}
+
+.search-button:hover {
+    color: #e68a00;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .search-container {
+        width: 80%;
+    }
+}
+
+
+
+
+/* Sección de Productos */
+.productos {
+    margin-top: 40px;
+}
+
+.productos h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body h5 {
+    font-weight: bold;
+    color: #FF9900;
+}
+
+.card-body p {
+    color: #666;
+}
+
+.card-body a {
+    background-color: #FF9900;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.card-body a:hover {
+    background-color: #e68a00;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.social-media img:hover {
+    filter: brightness(1);
+}
