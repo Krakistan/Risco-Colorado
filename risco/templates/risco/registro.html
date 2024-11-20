@@ -70,40 +70,47 @@
 
     </header>
 
-<section>
-    <div class=" container-registro row ">
-      <h2 class="titulo">Registro de Usuario</h2>
-      <form method="post" class="form">
-        {% csrf_token %}
-  
-        <div class="inputbox">
-          {{ formulario.first_name }}
-          <label>Nombre de Usuario</label>
-        </div>
-  
-        <div class="inputbox">
-          {{ formulario.email }}
-          <label>Correo Electrónico</label>
-        </div>
-  
-        <div class="inputbox">
-          {{ formulario.password1 }}
-          <label>Contraseña</label>
-        </div>
-  
-        <div class="inputbox">
-          {{ formulario.password2 }}
-          <label>Confirmar Contraseña</label>
-        </div>
-  
-        <button type="submit" class="boton">Registrarse</button>
-  
-        <div class="register">
-          <p>¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a></p>
-        </div>
-      </form>
-    </div>
-</section>
+    <div class="body-container">
+        <section class="creacion-cuenta-section">
+          <div class="creacion-cuenta-container">
+            <h2 class="creacion-cuenta-titulo">Registro de Usuario</h2>
+          <form method="post" class="form">
+            {% csrf_token %}
+      
+            <div class="inputbox form-group">
+              <label>Nombre de Usuario</label>
+              {{ formulario.first_name }}
+    
+            </div>
+      
+            <div class="inputbox">
+              <label><span style="color: #f8981f; font-weight: bold;">Correo Electrónico</span></label>
+              {{ formulario.email }}
+    
+            </div>
+      
+            <div class="inputbox form-group">
+              <label>Contraseña</label>
+              {{ formulario.password1 }}
+    
+            </div>
+      
+            <div class="inputbox form-group">
+              <label>Confirmar Contraseña</label>
+              {{ formulario.password2 }}
+    
+            </div>
+      
+            <button type="submit" class="submit-btn">Registrarse</button>
+      
+            <div class="register">
+              <p class="creacion-cuenta-texto">¿Ya tienes una cuenta? <a href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a></p>
+            </div>
+          </form>
+          <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+          </div>
+        </section>
+      </div>
 
 
     <footer>
